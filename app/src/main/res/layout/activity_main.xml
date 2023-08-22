@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_y="50dp"
+    android:pointerIcon="arrow"
+    android:scrollbarSize="50dp"
+    app:circularflow_radiusInDP="50dp"
+    app:layout_constraintCircleRadius="50dp"
+    tools:context=".MainActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutInfoMusica"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#9F42BD"
+       app:layout_constraintBottom_toTopOf="@+id/layoutRedesSociais"
+       tools:layout_editor_absoluteX="0dp" >
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:text="nome do cantor"
+          android:textAlignment="center"
+          app:layout_constraintEnd_toStartOf="@+id/imageView13"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toEndOf="@+id/imgFavorito"
+          app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+      <ImageView
+          android:id="@+id/imageView13"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/more_vert" />
+
+      <ImageView
+          android:id="@+id/imgFavorito"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_marginStart="5dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:onClick="favoritar"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/ic_favorite_border" />
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginEnd="10dp"
+          android:text="nome da musica"
+          android:textAlignment="center"
+          android:textSize="16sp"
+          app:layout_constraintEnd_toStartOf="@+id/imageView13"
+          app:layout_constraintStart_toEndOf="@+id/imgFavorito"
+          app:layout_constraintTop_toTopOf="parent" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutRedesSociais"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#B8B9BC"
+       app:layout_constraintBottom_toTopOf="@+id/layoutTempoMusica"
+       tools:layout_editor_absoluteX="0dp">
+
+      <ImageView
+          android:id="@+id/imageView4"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/imageView2"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/imageView3"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_facebook" />
+
+      <ImageView
+          android:id="@+id/imageView3"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/imageView4"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_whatsapp" />
+
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/imageView"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/imageView4"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_twitter" />
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/imageView2"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_share" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutToolBar"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#3F51B5"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:layout_editor_absoluteX="0dp" >
+
+      <ImageView
+          android:id="@+id/imageView12"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/order" />
+
+      <ImageView
+          android:id="@+id/imageView11"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:padding="3dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/ic_arrow_left" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutTempoMusica"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#7A88D6"
+       app:layout_constraintBottom_toTopOf="@+id/layoutPlayer">
+
+      <TextView
+          android:id="@+id/txtTempoTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="15dp"
+          android:text="02:59"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <SeekBar
+          android:id="@+id/seekBar3"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginBottom="16dp"
+          android:foregroundTint="#AE9999"
+          android:foregroundTintMode="src_in"
+          android:indeterminate="false"
+          android:indeterminateDrawable="@color/design_default_color_error"
+          android:indeterminateTint="#EA1414"
+          android:indeterminateTintMode="screen"
+          android:pointerIcon="zoom_in"
+          android:progressTint="#F44336"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.162"
+          app:layout_constraintStart_toStartOf="parent" />
+
+      <TextView
+          android:id="@+id/txtTempoAuto"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="15dp"
+          android:text="00:00"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutPlayer"
+       android:layout_width="0dp"
+       android:layout_height="70dp"
+       android:background="#CD1212"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent">
+
+      <ImageView
+          android:id="@+id/imageView10"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginStart="10dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_facebook" />
+
+      <ImageView
+          android:id="@+id/imageView9"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginEnd="10dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.466"
+          app:srcCompat="@mipmap/ic_facebook" />
+
+      <ImageView
+          android:id="@+id/imageView8"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginEnd="10dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/imgPlayPause"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.466"
+          app:srcCompat="@drawable/ic_skip_previous" />
+
+      <ImageView
+          android:id="@+id/imageView7"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginStart="10dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/imgPlayPause"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.466"
+          app:srcCompat="@drawable/ic_skip_next" />
+
+      <ImageView
+          android:id="@+id/imgPlayPause"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:background="@drawable/click_button"
+          android:clickable="true"
+          android:onClick="playPause"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.533"
+          app:srcCompat="@drawable/ic_play" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

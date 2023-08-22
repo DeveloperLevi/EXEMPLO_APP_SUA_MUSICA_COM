@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EXEMPLO_APP_SUA_MUSICA_COM" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.EXEMPLO_APP_SUA_MUSICA_COM" parent="Base.Theme.EXEMPLO_APP_SUA_MUSICA_COM" />
+</resources>
