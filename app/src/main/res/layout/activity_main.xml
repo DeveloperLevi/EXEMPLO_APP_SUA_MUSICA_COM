@@ -15,27 +15,28 @@
        android:id="@+id/layoutInfoMusica"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:background="#9F42BD"
        app:layout_constraintBottom_toTopOf="@+id/layoutRedesSociais"
-       tools:layout_editor_absoluteX="0dp" >
+       tools:layout_editor_absoluteX="0dp">
 
       <TextView
-          android:id="@+id/textView3"
+          android:id="@+id/textNomeArtista"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:text="nome do cantor"
           android:textAlignment="center"
+          android:textColor="#42A5F5"
+          android:textStyle="bold"
           app:layout_constraintEnd_toStartOf="@+id/imageView13"
           app:layout_constraintHorizontal_bias="0.0"
           app:layout_constraintStart_toEndOf="@+id/imgFavorito"
-          app:layout_constraintTop_toBottomOf="@+id/textView" />
+          app:layout_constraintTop_toBottomOf="@+id/textNomeMusica" />
 
       <ImageView
           android:id="@+id/imageView13"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
           android:background="@drawable/click_button"
           android:clickable="true"
           android:padding="3dp"
@@ -46,8 +47,8 @@
 
       <ImageView
           android:id="@+id/imgFavorito"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
           android:layout_marginStart="5dp"
           android:background="@drawable/click_button"
           android:clickable="true"
@@ -59,15 +60,17 @@
           app:srcCompat="@drawable/ic_favorite_border" />
 
       <TextView
-          android:id="@+id/textView"
+          android:id="@+id/textNomeMusica"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_marginStart="10dp"
           android:layout_marginTop="5dp"
           android:layout_marginEnd="10dp"
           android:text="nome da musica"
-          android:textAlignment="center"
+          android:textAlignment="viewStart"
+          android:textColor="#EC407A"
           android:textSize="16sp"
+          android:textStyle="bold"
           app:layout_constraintEnd_toStartOf="@+id/imageView13"
           app:layout_constraintStart_toEndOf="@+id/imgFavorito"
           app:layout_constraintTop_toTopOf="parent" />
@@ -77,7 +80,7 @@
        android:id="@+id/layoutRedesSociais"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:background="#B8B9BC"
+       android:background="#DDDDDD"
        app:layout_constraintBottom_toTopOf="@+id/layoutTempoMusica"
        tools:layout_editor_absoluteX="0dp">
 
@@ -140,26 +143,28 @@
        android:id="@+id/layoutToolBar"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:background="#3F51B5"
        app:layout_constraintTop_toTopOf="parent"
-       tools:layout_editor_absoluteX="0dp" >
+       tools:layout_editor_absoluteX="0dp">
 
       <ImageView
           android:id="@+id/imageView12"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="10dp"
           android:background="@drawable/click_button"
           android:clickable="true"
           android:padding="3dp"
-          app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:srcCompat="@drawable/order" />
 
       <ImageView
           android:id="@+id/imageView11"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="5dp"
           android:background="@drawable/click_button"
           android:clickable="true"
           android:padding="3dp"
@@ -167,13 +172,22 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:srcCompat="@drawable/ic_arrow_left" />
+
+      <TextView
+          android:id="@+id/textView123"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="TextView"
+          android:textSize="20dp"
+          app:layout_constraintEnd_toStartOf="@+id/imageView12"
+          app:layout_constraintStart_toEndOf="@+id/imageView11"
+          tools:layout_editor_absoluteY="16dp" />
    </androidx.constraintlayout.widget.ConstraintLayout>
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:id="@+id/layoutTempoMusica"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:background="#7A88D6"
        app:layout_constraintBottom_toTopOf="@+id/layoutPlayer">
 
       <TextView
@@ -186,20 +200,20 @@
           app:layout_constraintTop_toTopOf="parent" />
 
       <SeekBar
-          android:id="@+id/seekBar3"
+          android:id="@+id/seekBarTempoMusica"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:layout_marginBottom="16dp"
-          android:foregroundTint="#AE9999"
+          android:foregroundTint="#1E1919"
           android:foregroundTintMode="src_in"
           android:indeterminate="false"
-          android:indeterminateDrawable="@color/design_default_color_error"
-          android:indeterminateTint="#EA1414"
+          android:indeterminateTint="#EC407A"
           android:indeterminateTintMode="screen"
           android:pointerIcon="zoom_in"
-          android:progressTint="#F44336"
+          android:progressTint="#EC407A"
+          android:scrollbarSize="10dp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.162"
@@ -220,36 +234,38 @@
        android:id="@+id/layoutPlayer"
        android:layout_width="0dp"
        android:layout_height="70dp"
-       android:background="#CD1212"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent">
 
       <ImageView
-          android:id="@+id/imageView10"
-          android:layout_width="40dp"
-          android:layout_height="40dp"
-          android:layout_marginStart="10dp"
+          android:id="@+id/imgRamdom"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_marginStart="15dp"
           android:background="@drawable/click_button"
           android:clickable="true"
+          android:foregroundTint="#C8BDBD"
+          android:onClick="ramdomClick"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
-          app:srcCompat="@mipmap/ic_facebook" />
+          app:srcCompat="@drawable/ic_ramdom_false" />
 
       <ImageView
-          android:id="@+id/imageView9"
-          android:layout_width="40dp"
-          android:layout_height="40dp"
-          android:layout_marginEnd="10dp"
+          android:id="@+id/imgRepeat"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_marginEnd="15dp"
           android:background="@drawable/click_button"
           android:clickable="true"
+          android:onClick="repeatClick"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintVertical_bias="0.466"
-          app:srcCompat="@mipmap/ic_facebook" />
+          app:srcCompat="@drawable/ic_repeat" />
 
       <ImageView
           android:id="@+id/imageView8"
@@ -258,6 +274,7 @@
           android:layout_marginEnd="10dp"
           android:background="@drawable/click_button"
           android:clickable="true"
+          android:onClick="previousMusicClick"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toStartOf="@+id/imgPlayPause"
           app:layout_constraintTop_toTopOf="parent"
@@ -271,6 +288,7 @@
           android:layout_marginStart="10dp"
           android:background="@drawable/click_button"
           android:clickable="true"
+          android:onClick="nextMusicClick"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toEndOf="@+id/imgPlayPause"
           app:layout_constraintTop_toTopOf="parent"
@@ -283,7 +301,7 @@
           android:layout_height="60dp"
           android:background="@drawable/click_button"
           android:clickable="true"
-          android:onClick="playPause"
+          android:onClick="playPauseClick"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
@@ -291,5 +309,75 @@
           app:layout_constraintVertical_bias="0.533"
           app:srcCompat="@drawable/ic_play" />
    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.viewpager2.widget.ViewPager2
+       android:id="@+id/viewPageMain"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginStart="5dp"
+       android:layout_marginTop="5dp"
+       android:layout_marginEnd="5dp"
+       android:layout_marginBottom="5dp"
+       app:layout_constraintBottom_toTopOf="@+id/layoutInfoMusica"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/layoutToolBar"
+       app:layout_constraintVertical_bias="1.0" />
+
+   <me.relex.circleindicator.CircleIndicator3
+       android:id="@+id/circleIndicator"
+       android:layout_width="0dp"
+       android:layout_height="50dp"
+       android:alwaysDrawnWithCache="false"
+       android:animateLayoutChanges="false"
+       android:background="#00897B"
+       android:backgroundTint="#00897B"
+       android:divider="@drawable/ic_favorite"
+       android:fadeScrollbars="true"
+       android:outlineProvider="background"
+       android:scrollbarSize="100dp"
+       android:scrollbarStyle="insideOverlay"
+       android:visibility="gone"
+       app:ci_height="10dp"
+       app:ci_margin="20dp"
+       app:circularflow_defaultRadius="20dp"
+       app:layout_constraintBottom_toBottomOf="@+id/viewPageMain"
+       app:layout_constraintEnd_toEndOf="@+id/viewPageMain"
+       app:layout_constraintStart_toStartOf="@+id/viewPageMain"
+       tools:visibility="visible" />
+
+   <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+       android:id="@+id/wormIndicator2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="20dp"
+       app:dotsColor="#000000"
+       app:dotsSize="10dp"
+       app:dotsStrokeColor="#858585"
+       app:dotsStrokeWidth="5dp"
+       app:layout_constraintBottom_toTopOf="@+id/circleIndicator"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+       android:id="@+id/dots_indicator"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:visibility="gone"
+       app:dotsColor="@color/white"
+       app:dotsCornerRadius="8dp"
+       app:dotsSize="16dp"
+       app:dotsSpacing="4dp"
+       app:dotsWidthFactor="2.5"
+       app:layout_constraintBottom_toTopOf="@+id/wormIndicator2"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:progressMode="true"
+       app:selectedDotColor="#131212"
+       tools:visibility="visible" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
