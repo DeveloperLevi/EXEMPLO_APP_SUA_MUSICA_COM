@@ -66,6 +66,7 @@
           android:layout_marginStart="10dp"
           android:layout_marginTop="5dp"
           android:layout_marginEnd="10dp"
+          android:singleLine="true"
           android:text="nome da musica"
           android:textAlignment="viewStart"
           android:textColor="#EC407A"
@@ -178,10 +179,12 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="TextView"
+          android:textColor="#E12222"
           android:textSize="20dp"
           app:layout_constraintEnd_toStartOf="@+id/imageView12"
           app:layout_constraintStart_toEndOf="@+id/imageView11"
           tools:layout_editor_absoluteY="16dp" />
+
    </androidx.constraintlayout.widget.ConstraintLayout>
 
    <androidx.constraintlayout.widget.ConstraintLayout
@@ -214,6 +217,9 @@
           android:pointerIcon="zoom_in"
           android:progressTint="#EC407A"
           android:scrollbarSize="10dp"
+          android:secondaryProgressTint="#42A5F5"
+          android:thumbTint="#EC407A"
+          android:tickMarkTint="#D4E157"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.162"
@@ -318,41 +324,21 @@
        android:layout_marginTop="5dp"
        android:layout_marginEnd="5dp"
        android:layout_marginBottom="5dp"
-       app:layout_constraintBottom_toTopOf="@+id/layoutInfoMusica"
+       android:clipChildren="true"
+       android:clipToPadding="true"
+       app:layout_constraintBottom_toTopOf="@+id/dots_indicator"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/layoutToolBar"
        app:layout_constraintVertical_bias="1.0" />
 
-   <me.relex.circleindicator.CircleIndicator3
-       android:id="@+id/circleIndicator"
-       android:layout_width="0dp"
-       android:layout_height="50dp"
-       android:alwaysDrawnWithCache="false"
-       android:animateLayoutChanges="false"
-       android:background="#00897B"
-       android:backgroundTint="#00897B"
-       android:divider="@drawable/ic_favorite"
-       android:fadeScrollbars="true"
-       android:outlineProvider="background"
-       android:scrollbarSize="100dp"
-       android:scrollbarStyle="insideOverlay"
-       android:visibility="gone"
-       app:ci_height="10dp"
-       app:ci_margin="20dp"
-       app:circularflow_defaultRadius="20dp"
-       app:layout_constraintBottom_toBottomOf="@+id/viewPageMain"
-       app:layout_constraintEnd_toEndOf="@+id/viewPageMain"
-       app:layout_constraintStart_toStartOf="@+id/viewPageMain"
-       tools:visibility="visible" />
-
    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
        android:id="@+id/wormIndicator2"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginBottom="20dp"
-       app:dotsColor="#000000"
+       app:dotsColor="@color/dot_selected_day_night"
        app:dotsSize="10dp"
        app:dotsStrokeColor="#858585"
        app:dotsStrokeWidth="5dp"
@@ -372,12 +358,35 @@
        app:dotsWidthFactor="2.5"
        app:layout_constraintBottom_toTopOf="@+id/wormIndicator2"
        app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
        app:layout_constraintStart_toStartOf="parent"
        app:progressMode="true"
        app:selectedDotColor="#131212"
+       tools:visibility="visible" >
+
+   </com.tbuonomo.viewpagerdotsindicator.DotsIndicator>
+
+   <me.relex.circleindicator.CircleIndicator3
+       android:id="@+id/circleIndicator"
+       android:layout_width="0dp"
+       android:layout_height="50dp"
+       android:alwaysDrawnWithCache="false"
+       android:animateLayoutChanges="false"
+       android:background="#00897B"
+       android:backgroundTint="#00897B"
+       android:divider="@drawable/ic_favorite"
+       android:fadeScrollbars="true"
+       android:outlineProvider="background"
+       android:scrollbarSize="100dp"
+       android:scrollbarStyle="insideOverlay"
+       android:visibility="gone"
+       app:ci_height="10dp"
+       app:ci_margin="20dp"
+       app:circularflow_defaultRadius="20dp"
+       app:layout_constraintBottom_toTopOf="@+id/layoutInfoMusica"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
        tools:visibility="visible" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

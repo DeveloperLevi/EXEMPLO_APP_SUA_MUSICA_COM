@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CORES VARIANTES ENTRE OS TEMAS DAY / NIGHT-->
+    <color name="tint_button_day_night">#FFFFFFFF</color>
+
+</resources>

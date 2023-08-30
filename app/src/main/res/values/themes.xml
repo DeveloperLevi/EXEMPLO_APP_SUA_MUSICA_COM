@@ -3,6 +3,7 @@
     <style name="Base.Theme.EXEMPLO_APP_SUA_MUSICA_COM" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:colorPrimary">#DDDDDD</item>
         <item name="colorAccent">#DDDDDD</item>
+        <item name="android:statusBarColor">#DDDDDD</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
@@ -11,4 +12,8 @@
         <item name="android:colorPrimary">#DDDDDD</item>
         <item name="colorAccent">#DDDDDD</item>
     </style>
+
+    <!-- CORES QUE MUDAM DE ACORDO COM O TEMA DAY / NIGHT-->
+    <color name="dot_selected_day_night">#000000</color>
+
 </resources>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.exemplo_app_sua_musica_com.adapter.AdapterPlaylist
 import com.example.exemplo_app_sua_musica_com.databinding.ActivityMainBinding
@@ -29,9 +30,11 @@ lateinit var playlist: ArrayList<ModelPlayList>
         setContentView(binding.root)
 
         playlist = gerarPlayist()
-        val apply = binding.viewPageMain.apply {
+        binding.viewPageMain.apply {
             adapter = AdapterPlaylist(playlist)
-            setPageTransformer(Pager2_ZoomInTransformer_Kotlin())
+            offscreenPageLimit = 3
+
+          //  setPageTransformer(Pager2_ZoomInTransformer_Kotlin())
             // Register the callback to the pager.
 
         }

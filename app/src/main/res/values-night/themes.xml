@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EXEMPLO_APP_SUA_MUSICA_COM" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorPrimary">#DDDDDD</item>
+        <item name="colorAccent">#DDDDDD</item>
+        <item name="android:statusBarColor"><![CDATA[#DDDDDD]]></item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.EXEMPLO_APP_SUA_MUSICA_COM" parent="Base.Theme.EXEMPLO_APP_SUA_MUSICA_COM" >
+        <item name="android:colorPrimary">#DDDDDD</item>
+        <item name="colorAccent">#DDDDDD</item>
+    </style>
+
+    <!-- CORES QUE MUDAM DE ACORDO COM O TEMA DAY / NIGHT-->
+    <color name="dot_selected_day_night">#EC407A</color>
+
+</resources>
