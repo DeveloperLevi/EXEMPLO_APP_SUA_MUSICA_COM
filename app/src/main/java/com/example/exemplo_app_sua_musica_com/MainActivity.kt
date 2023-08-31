@@ -11,6 +11,7 @@ import com.example.exemplo_app_sua_musica_com.databinding.ActivityMainBinding
 import com.example.exemplo_app_sua_musica_com.model.ModelPlayList
 import com.example.exemplo_app_sua_musica_com.pageTransformes.Pager2_ZoomInTransformer_Kotlin
 import java.text.DecimalFormat
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +33,11 @@ lateinit var playlist: ArrayList<ModelPlayList>
         playlist = gerarPlayist()
         binding.viewPageMain.apply {
             adapter = AdapterPlaylist(playlist)
+            clipChildren = false
+            clipToPadding = false
             offscreenPageLimit = 3
+            setPageTransformer(Pager2_ZoomInTransformer_Kotlin())
+        //setPageTransformer(MarginPageTransformer(1))
 
           //  setPageTransformer(Pager2_ZoomInTransformer_Kotlin())
             // Register the callback to the pager.
@@ -136,11 +141,19 @@ lateinit var playlist: ArrayList<ModelPlayList>
         }
     }
     fun nextMusicClick(view: View){
-        binding.viewPageMain.currentItem = binding.viewPageMain.currentItem + 1
+        if (ramdom) {
+            binding.viewPageMain.currentItem = Random.nextInt(0,9)
+        }else{
+            binding.viewPageMain.currentItem = binding.viewPageMain.currentItem + 1
+        }
     }
 
     fun previousMusicClick(view: View){
-        binding.viewPageMain.currentItem = binding.viewPageMain.currentItem - 1
+        if (ramdom) {
+            binding.viewPageMain.currentItem = Random.nextInt(0, 9)
+        }else{
+            binding.viewPageMain.currentItem = binding.viewPageMain.currentItem - 1
+        }
     }
 
     fun gerarPlayist() : ArrayList<ModelPlayList> = arrayListOf(
