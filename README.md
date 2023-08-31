@@ -14,5 +14,6 @@
  #10 - Varios exemplos de pageTransformers para ser usado na ViewPage2
  #11 - Arquivo Colors.xml separados para do android temas day / night
  #12 - mudança de cor de Drawable de acordo com o tema day / night
+ #13 - Exemplo de uso so Ramdom ao Passar/Voltar as musicas no player
  
 
