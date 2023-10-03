@@ -142,7 +142,12 @@ lateinit var playlist: ArrayList<ModelPlayList>
     }
     fun nextMusicClick(view: View){
         if (ramdom) {
-            binding.viewPageMain.currentItem = Random.nextInt(0,9)
+            var nextPosition = Random.nextInt(0,9)
+
+            while (nextPosition == binding.viewPageMain.currentItem){
+                nextPosition = Random.nextInt(0,9)
+            }
+            binding.viewPageMain.currentItem = nextPosition
         }else{
             binding.viewPageMain.currentItem = binding.viewPageMain.currentItem + 1
         }
@@ -150,7 +155,11 @@ lateinit var playlist: ArrayList<ModelPlayList>
 
     fun previousMusicClick(view: View){
         if (ramdom) {
-            binding.viewPageMain.currentItem = Random.nextInt(0, 9)
+           var previousPosition = Random.nextInt(0, 9)
+            while (previousPosition == binding.viewPageMain.currentItem){
+                previousPosition = Random.nextInt(0, 9)
+            }
+            binding.viewPageMain.currentItem = previousPosition
         }else{
             binding.viewPageMain.currentItem = binding.viewPageMain.currentItem - 1
         }
